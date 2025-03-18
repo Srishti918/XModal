@@ -6,24 +6,17 @@ const Modal = ({ isOpen, onClose }) => {
 
   const validate = () => {
     let newErrors = {};
-    // if (!formData.username) newErrors.username = "Username is required.";
-    // if (!formData.email) {
-    //   newErrors.email = "Email is required.";
-    //} 
+    
      if (!formData.email.includes("@")) {
       alert("Invalid email. Please check your email address.");
       return false;
     }
-    // if (!formData.phone) {
-    //   newErrors.phone = "Phone number is required.";
-   // }
+   
      if (!/^[0-9]{10}$/.test(formData.phone)) {
       alert("Invalid phone number. Please enter a 10-digit phone number.");
       return false;
     }
-    // if (!formData.dob) {
-    //   newErrors.dob = "Date of Birth is required.";
-    //} 
+     
      if (new Date(formData.dob) > new Date()) {
       alert("Invalid Date of Birth. Date of birth cannot be in the future.");
       return false;
