@@ -90,6 +90,7 @@ const Modal = ({ isOpen, onClose }) => {
                 type="date"
                 value={formData.dob}
                 onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
+                required
               />
               {errors.dob && <p>{errors.dob}</p>}
             </label>
